@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -42,6 +44,9 @@ namespace redoc_lesson_2
                         }
                     }
                 });
+
+                var filepath = Path.Combine(AppContext.BaseDirectory, "redoc-lesson-2.xml");
+                config.IncludeXmlComments(filepath);
             });
         }
 

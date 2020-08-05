@@ -23,6 +23,11 @@ namespace redoc_lesson_2.Controllers
             _logger = logger;
         }
 
+        /// <summary>
+        /// Get
+        /// </summary>
+        /// <remarks>ดึงข้อมูลสภาพอากาศ</remarks>
+        /// <returns>ลิสของวันที่และสภาพอากาศ</returns>
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
@@ -36,12 +41,28 @@ namespace redoc_lesson_2.Controllers
             .ToArray();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="weatherForecast"></param>
+        /// <returns>HTTP Status Code</returns>
+        /// <response code="200">Successfully saved</response>
+        /// <response code="500">Bad Request</response>
         [HttpPut]
         public IActionResult Put(int id, WeatherForecast weatherForecast)
         {
 
-
-            return NoContent();
+            try
+            {
+                //successfully updated
+                return Ok();
+            }
+            catch(Exception e) {
+                //fail
+                return BadRequest();
+            }
+            
         }
     }
 }
