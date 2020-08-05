@@ -10,6 +10,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Any;
+using Microsoft.OpenApi.Interfaces;
+using Microsoft.OpenApi.Models;
 
 namespace redoc_lesson_2
 {
@@ -26,7 +29,20 @@ namespace redoc_lesson_2
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddSwaggerGen();
+            services.AddSwaggerGen(config=> {
+                config.SwaggerDoc("v1", new OpenApiInfo() { 
+                    Title = "Weather Forecast",
+                    Extensions = new Dictionary<string, IOpenApiExtension>
+                    {
+                        {"x-logo", new OpenApiObject
+                            {
+                                {"url", new OpenApiString("https://jubili.builk.com/dist/asset/images/logo.svg")},
+                                { "altText", new OpenApiString("Builk logo")}
+                            }
+                        }
+                    }
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
