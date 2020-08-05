@@ -26,6 +26,7 @@ namespace redoc_lesson_2
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,6 +38,11 @@ namespace redoc_lesson_2
             }
 
             app.UseHttpsRedirection();
+
+            app.UseSwagger();
+            app.UseReDoc(config=> {
+                config.SpecUrl("/swagger/v1/swagger.json");
+            });
 
             app.UseRouting();
 

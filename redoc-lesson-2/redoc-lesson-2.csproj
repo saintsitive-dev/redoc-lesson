@@ -5,5 +5,10 @@
     <RootNamespace>redoc_lesson_2</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.ReDoc" Version="5.5.1" />
+  </ItemGroup>
+
 
 </Project>
