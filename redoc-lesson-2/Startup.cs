@@ -45,6 +45,23 @@ namespace redoc_lesson_2
                     }
                 });
 
+                config.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme { 
+                    Type = SecuritySchemeType.OAuth2,
+                    Flows = new OpenApiOAuthFlows
+                    {
+                        AuthorizationCode = new OpenApiOAuthFlow
+                        {
+                            AuthorizationUrl = new Uri("https://localhost:5000/connect/authorize"),
+                            TokenUrl = new Uri("https://localhost:5000/connect/token"),
+                            RefreshUrl = new Uri("https://localhost:5000/connect/refreshToken"),
+                            Scopes = new Dictionary<string, string>
+                            {
+                                {"v1", "Demo API - full access"}
+                            }
+                        }
+                    }
+                });
+
                 var filepath = Path.Combine(AppContext.BaseDirectory, "redoc-lesson-2.xml");
                 config.IncludeXmlComments(filepath);
             });

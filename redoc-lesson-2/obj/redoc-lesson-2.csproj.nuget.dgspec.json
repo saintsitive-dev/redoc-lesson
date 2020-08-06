@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\black-hole\\CSharp\\redoc-lesson\\redoc-lesson-2\\redoc-lesson-2.csproj": {}
+    "C:\\black-hole\\CSharp\\redoc-lesson\\redoc-lesson-2\\redoc-lesson-2.csproj": {}
   },
   "projects": {
-    "D:\\black-hole\\CSharp\\redoc-lesson\\redoc-lesson-2\\redoc-lesson-2.csproj": {
+    "C:\\black-hole\\CSharp\\redoc-lesson\\redoc-lesson-2\\redoc-lesson-2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\black-hole\\CSharp\\redoc-lesson\\redoc-lesson-2\\redoc-lesson-2.csproj",
+        "projectUniqueName": "C:\\black-hole\\CSharp\\redoc-lesson\\redoc-lesson-2\\redoc-lesson-2.csproj",
         "projectName": "redoc-lesson-2",
-        "projectPath": "D:\\black-hole\\CSharp\\redoc-lesson\\redoc-lesson-2\\redoc-lesson-2.csproj",
-        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "D:\\black-hole\\CSharp\\redoc-lesson\\redoc-lesson-2\\obj\\",
+        "projectPath": "C:\\black-hole\\CSharp\\redoc-lesson\\redoc-lesson-2\\redoc-lesson-2.csproj",
+        "packagesPath": "C:\\Users\\COM0171\\.nuget\\packages\\",
+        "outputPath": "C:\\black-hole\\CSharp\\redoc-lesson\\redoc-lesson-2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\COM0171\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
