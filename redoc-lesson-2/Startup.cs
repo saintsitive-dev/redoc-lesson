@@ -31,6 +31,7 @@ namespace redoc_lesson_2
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+           
             services.AddSwaggerGen(config=> {
                 config.SwaggerDoc("v1", new OpenApiInfo() { 
                     Title = "Weather Forecast",
@@ -44,14 +45,13 @@ namespace redoc_lesson_2
                         }
                     }
                 });
-
                 config.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme { 
                     Type = SecuritySchemeType.OAuth2,
                     Flows = new OpenApiOAuthFlows
                     {
                         AuthorizationCode = new OpenApiOAuthFlow
                         {
-                            AuthorizationUrl = new Uri("https://localhost:5000/connect/authorize"),
+                            AuthorizationUrl = new Uri("https://auth.builk.com/v1/api/auth"),
                             TokenUrl = new Uri("https://localhost:5000/connect/token"),
                             RefreshUrl = new Uri("https://localhost:5000/connect/refreshToken"),
                             Scopes = new Dictionary<string, string>
@@ -76,15 +76,12 @@ namespace redoc_lesson_2
             }
 
             app.UseHttpsRedirection();
-
             app.UseSwagger();
             app.UseReDoc(config=> {
                 config.SpecUrl("/swagger/v1/swagger.json");
             });
 
             app.UseRouting();
-
-            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

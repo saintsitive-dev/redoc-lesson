@@ -27,7 +27,7 @@ namespace redoc_lesson_2.Controllers
         /// <summary>
         /// Get range of weather forecast by date
         /// </summary>
-        /// <remarks>ดึงข้อมูลสภาพอากาศ</remarks>
+        /// <remarks>ดึงข้อมูลสภาพอากาศตามวัน</remarks>
         /// <returns>ลิสของวันที่และสภาพอากาศ</returns>
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
