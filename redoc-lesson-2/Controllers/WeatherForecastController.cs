@@ -43,10 +43,10 @@ namespace redoc_lesson_2.Controllers
         }
 
         /// <summary>
-        /// 
+        /// อัพเดตข้อมูลพยากรณ์อากาศ
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="weatherForecast"></param>
+        /// <param name="id">ID ชุดข้อมูลที่ต้องการแก้ไข</param>
+        /// <param name="weatherForecast">โมเดลของข้อมูลที่ต้องการแก้ไข</param>
         /// <returns>HTTP Status Code</returns>
         /// <response code="200">Successfully saved</response>
         /// <response code="500">Bad Request</response>
