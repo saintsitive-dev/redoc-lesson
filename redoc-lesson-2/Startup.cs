@@ -63,7 +63,8 @@ namespace redoc_lesson_2
                 });
 
                 var filepath = Path.Combine(AppContext.BaseDirectory, "redoc-lesson-2.xml");
-                config.IncludeXmlComments(filepath);
+                config.IncludeXmlComments(filepath, includeControllerXmlComments: true);
+                
             });
         }
 
